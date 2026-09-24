@@ -107,5 +107,8 @@ alter table choose_a_plan add column serialNo int  first;
 alter table choose_a_plan add column userplan int  after serialNo;
 alter table choose_a_plan add column Total_price int;
 select * from choose_a_plan;
+
+truncate table  shows;
+select * from shows;
 insert into choose_a_plan values(1,999,4999,999,6999,499,1000);
 show tables;
