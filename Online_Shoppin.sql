@@ -12,7 +12,6 @@ insert into customers(customer_id,customer_name,customer_address) values(1,"sri"
 (3,"lakshmi","benguluru"),(4,"koteswarao","meenavilluru"),(5,"mavullamma","sivapuram"),(6,"kishore","pentapadu"),
 (7,"nani","patna"),(8,"dattatreya","bihar"),(9,"gayathri","vadali"),(10,"chaitanya","lingampalli"),(11,"saany","chennai"),
 (12,"balu","velpur"),(13,"harsha","kakinada"),(14,"devi","ramachandrapuram"),(15,"chamundeswari","ravulapalem");
-
 alter table customers add column customer_rating float ;
 alter table customers add column phone_number bigInt after customer_name;
 alter table customers add column  order_date date after customer_id;
@@ -69,19 +68,13 @@ alter table products  rename column serialNo to Serial_No ;
 alter table products rename column product_id to Product_Id;
 alter table products rename column product_name to Product_Name;
 select * from products;
-
-
-
 create table categories(
 categorie_name varchar(100)
 );
-
 select * from categories;
-
 insert into categories(categorie_name) values("women western"),("men"),("accessories"),("foot wear"),("kids clothing"),
 ("kids toys"),("kids accessories"),("baby core");
 select * from  categories;
-
 alter table categories add column serial_No int first;
 update categories set  serial_No=1 where categorie_name="women western";
 update categories set serial_No=2 where categorie_name="men";
